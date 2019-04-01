@@ -8,7 +8,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:flutter_ldn/main.dart';
+import 'package:not_last_meetup/main.dart';
 
 void main() {
   testWidgets('Test incrementing counter', (WidgetTester tester) async {
