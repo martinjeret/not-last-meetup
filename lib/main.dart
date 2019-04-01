@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home: MyHomePage(title: 'MWC Barcelona'),
+      home: MyHomePage(title: 'Not Last Meetup'),
     );
   }
 }
@@ -52,6 +52,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
+              // Provide a Key to this specific Text Widget. This allows us
+              // to identify this specific Widget from inside our test suite and
+              // read the text.
+              key: Key('counter'),
               style: Theme.of(context).textTheme.display1,
             ),
           ],
@@ -60,6 +64,9 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: GestureDetector(
         onLongPress: () => this.setState(() => _counter = 0),
         child: FloatingActionButton(
+          // Provide a Key to this the button. This allows us to find this
+          // specific button and tap it inside the test suite.
+          key: Key('increment'),
           onPressed: _incrementCounter,
           child: Icon(Icons.favorite_border),
         ),
